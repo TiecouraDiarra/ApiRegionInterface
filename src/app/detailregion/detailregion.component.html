@@ -1,0 +1,200 @@
+<body>
+    <div class="container" style="width: 95%; margin-left: auto; margin-right: auto;">
+        <div class="row mb-3 st">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/61/73/a7/vue-de-l-ancienne-gare.jpg?w=500&h=300&s=1"
+                class="imageR" class="" alt="" style="height:450px;">
+        </div>
+        <div class="row py-2">
+            <mat-divider></mat-divider>
+        </div>
+        <div class="row mb-3">
+            <div class="col-xl-6 col-md-6 mb-3">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-uppercase mb-1" style="text-align: center;">
+                                    Région : Kayes</div>
+                                <div style="text-align: justify;">
+                                    <h3>Kayes est une grande ville et une commune de l’ouest du Mali
+                                        à 495 km au nord-ouest de Bamako, sur les rives du fleuve Sénégal.
+                                        Elle est la capitale de la première région administrative et
+                                        le chef-lieu du cercle qui porte son nom. La ville connaît un
+                                        fort accroissement démographique puisqu'elle passe de 80 146 habitants
+                                        en 20051 à 127 36 habitants en 2009.</h3>
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <h3><strong>Population :</strong> 20 000 hbts </h3>
+                                            <h3><strong>Langue parlée :</strong> Sarakolé </h3>
+                                        </div>
+                                        <div class="col-auto">
+                                            <h3><strong>Domaine d'activité :</strong> Commerce </h3>
+                                            <h3><strong>Superficie :</strong> 22 192 km2 </h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col"><button mat-button class="btn-region" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <span>Modifier cette région</span>
+                                            </button></div>
+                                        <div class="col"><button mat-button class="btn-region" routerLink="/">
+                                                <span>Supprimer cette région</span>
+                                            </button></div>
+                                            
+                                    </div>
+
+                                    <!-- <a href="#" class="btn-region">Découvrir les régions</a> -->
+                                </div>
+
+                            </div>
+
+                            <div class="col-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 mb-3">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-mr-2">
+                                <div class="text-xs font-weight-bold text-uppercase mb-1" style="text-align: center;">
+                                    Les commentaires</div>
+                                <div class="d-flex flex-column comment-section">
+                                    <div class="bg-white comm">
+                                        <div class="d-flex flex-row user-info"><img class="rounded-circle"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiyHYtDJQ0t5jCs4j_PiD5ESMvPwnvHVa3w&usqp=CAU"
+                                                width="30" height="35">
+                                            <div class="d-flex flex-column justify-content-start ml-2"><span
+                                                    class="d-block font-weight-bold name"
+                                                    style="font-size: 12px;">Mamady CAMARA</span><span
+                                                    class="date text-black-50">14-12-2022</span></div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="comment-text" style="font-size: 15px;">Très jolie région.</p>
+                                        </div>
+                                        <mat-divider></mat-divider>
+                                    </div>
+                                    <div class="p-2">
+                                        <form class="row g-3">
+                                            <div class="col-auto" style="width: 50vh; border-radius: 2em;">
+                                                <input type="text" class="form-control" id="commentaire"
+                                                    placeholder="Votre commentaire" style="border-radius: 2em;">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button mat-button class="btn-region" routerLink="/login">
+                                                    <span>Commentez</span>
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier la région</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container register">
+                        <div class="row">
+
+                            <div class="col-md-12 register-right">
+
+                                <div class="tab-content" id="myTabContent">
+
+                                    <!-- MODIFIER UNE REGION -->
+                                    <div class="tab-pane fade show active" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <div class="row register-form">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            placeholder="Nom de région">
+                                                        <label for="floatingInput">Nom de région</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            placeholder="Population">
+                                                        <label for="floatingInput">Population</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            placeholder="Langue parlée">
+                                                        <label for="floatingInput">Langue parlée</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            placeholder="Domaine d'activité">
+                                                        <label for="floatingInput">Domaine d'activité</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected></option>
+                                                            <option value="1">Mali</option>
+                                                            <option value="2">Sénégal</option>
+                                                            <option value="3">France</option>
+                                                        </select>
+                                                        <label for="floatingInput">Choisir le pays</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a comment here"
+                                                    id="floatingTextarea2" rows="2" style="height: 100px"></textarea>
+                                                <label for="floatingTextarea2">Présentation de la région</label>
+                                            </div>
+                                            <br>
+                                            <div class="row bA">
+                                                <button mat-button class="btnAj"
+                                                    style="background-color: #3BC3FF; text-align: center;border-radius: 12px;"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <span>Ajouter</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

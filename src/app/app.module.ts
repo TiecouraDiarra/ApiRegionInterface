@@ -9,8 +9,19 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
+import { BoardComponent } from './board/board.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { RegionsComponent } from './regions/regions.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { DetailpaysComponent } from './detailpays/detailpays.component';
+import { DetailregionComponent } from './detailregion/detailregion.component';
+import { DetailpaysregionComponent } from './detailpaysregion/detailpaysregion.component';
+import { LoginComponent } from './login/login.component';
+import { CreercompteComponent } from './creercompte/creercompte.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BoardComponent, AccueilComponent, RegionsComponent, UtilisateurComponent, DetailpaysComponent, DetailregionComponent, DetailpaysregionComponent, LoginComponent, CreercompteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +31,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,78 @@
+/* p {
+    font-weight: 200;
+    font-size: 20px;
+} */
+
+/* .py-1 {
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+mat-divider {
+    /* margin-top: 16px;
+      margin-bottom: 16px; */
+    height: 4px;
+    background-color: black;
+}
+
+.drapeau {
+    height: 40px;
+    width: 50px;
+}
+
+.carte {
+    height: 300px;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-region {
+    border-radius: 2em;
+    background-color: #3BC3FF;
+    color: #ffffff;
+    text-align: center;
+    margin-left:38% !important ;
+    height: 35px;
+    margin-bottom: 2vh;
+}
+@media only screen and (max-width: 1114px){
+   .btn-region{
+    margin-left:10% !important ;
+   } 
+}
+@media only screen and (max-width: 790px){
+    .btn-region{
+     margin-left:20% !important ;
+    } 
+ }
+ @media only screen and (min-width: 510px){
+    .btn-region{
+     margin-left:auto ;
+     margin-right: auto;
+    } 
+ }
+.btn-region:hover {
+    background-color: #3BC3FF;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-regions {
+    border-radius: 2em;
+    background-color: #3BC3FF;
+    color: #ffffff;
+    text-align: center;
+    height: 35px;
+    margin-bottom: 2vh;
+}
+
+.col-md-6 {
+    flex: 0 0 auto;
+    height: 20% !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+.bA{
+    margin-top: 1%;
+  }

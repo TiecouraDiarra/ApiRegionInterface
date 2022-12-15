@@ -1,5 +1,4 @@
 <mat-toolbar>
-  
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened">
       menu
@@ -8,43 +7,55 @@
       close
     </mat-icon>
   </button>
-  Responsive side navigation
+  <h1>Application MaliTourist</h1>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav">
 
-    <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+    <a routerLink="/login" routerLinkActive="active">
+      <img class="avatar mat-elevation-z8"
+      src="https://image.shutterstock.com/image-vector/person-icon-flat-symbol-design-260nw-424612276.jpg" />
+    </a>
+    
 
-    <h4 class="name">John Smith</h4>
-    <p class="designation">Software Engineer</p>
+    <h4 class="name">Tiècoura DIARRA</h4>
+    <p class="designation">Administrateur</p>
 
     <mat-divider></mat-divider>
 
-
-    <button mat-button class="menu-button">
+    <!-- <button mat-button class="menu-button" routerLink="/board" routerLinkActive="active">
+      <mat-icon></mat-icon>
+      <span>Board</span>
+    </button>
+    <br> -->
+    <button mat-button class="menu-button" routerLink="/accueil" routerLinkActive="active">
       <mat-icon>home</mat-icon>
-      <span>Home</span>
+      <span>Accueil</span>
     </button>
-    <button mat-button class="menu-button">
+    <br>
+    <button mat-button class="menu-button" routerLink="/regions" routerLinkActive="active">
+      <mat-icon>location_on</mat-icon>
+      <span>Régions</span>
+    </button>
+    <br>
+    <button mat-button class="menu-button" routerLink="/utilisateur" routerLinkActive="active">
       <mat-icon>person</mat-icon>
-      <span>Profile</span>
+      <span>Utilisateur</span>
     </button>
-    <button mat-button class="menu-button">
-      <mat-icon>info</mat-icon>
-      <span>About</span>
-    </button>
-
+    <br>
+    <div class="py-5"></div>
     <mat-divider></mat-divider>
-
-    <button mat-button class="menu-button">
-      <mat-icon>help</mat-icon>
-      <span>Help</span>
+    <button mat-button class="menu-button" style="background-color: #3BC3FF; text-align: center;border-radius: 12px;" routerLink="/accueil">
+      <mat-icon>power_settings_new</mat-icon>
+      <span>Déconnexion</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8">
-      Main content here!
+    <div class="content">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

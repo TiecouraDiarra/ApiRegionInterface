@@ -1,0 +1,248 @@
+<body>
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-xl-4 col-md-6 mb-3">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                  Nombre de pays</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-6 mb-3">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                  Nombre de régions</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">21</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-6 mb-3">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                  Population mondiale</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">21 000 000 hbts</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row py-2">
+      <mat-divider></mat-divider>
+    </div>
+    <div class="row">
+      <button mat-button class="btnAj" style="background-color: #3BC3FF; text-align: center;border-radius: 12px;"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <span>Ajouter un pays</span>
+      </button>
+
+    </div>
+    <div class="container regionrow">
+      <div class="row">
+        <div class="col">
+
+          <div class="card cardi" style="width: 10rem;">
+            <a routerLink="/detailspays">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAG1BMVEUUtTrOESb80RYAtDt3vTL/0xH/2xTcYyLMACZ4nGq/AAAAeklEQVR4nO3OSQEAIAwAoHnO/ontMJ9CAiLqxly9bOdpdQ9rbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW3tL9oX62diUWhCyzAAAAAASUVORK5CYII="
+                class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">MALI</h5>
+                <h5 class="card-text"><strong>Capitale :</strong> Bamako </h5>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un pays</h1> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container register">
+            <div class="row">
+
+              <div class="col-md-12 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                      aria-controls="home" aria-selected="true">Pays</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                      aria-controls="profile" aria-selected="false">Régions</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Ajouter un pays</h3>
+                    <div class="row register-form">
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nom du pays">
+                            <label for="floatingInput">Nom du pays</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Capitale">
+                            <label for="floatingInput">Capitale</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Superficie">
+                            <label for="floatingInput">Superficie</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Langue officielle">
+                            <label for="floatingInput">Langue officielle</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                          rows="2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Présentation du pays</label>
+                      </div>
+                      <br>
+                      <div class="row bA">
+                        <button mat-button class="btnAj"
+                          style="background-color: #3BC3FF; text-align: center;border-radius: 12px;"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <span>Ajouter</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- AJOUTER UNE REGION -->
+
+                  <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h3 class="register-heading">Ajouter une région</h3>
+                    <div class="row register-form">
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nom de région">
+                            <label for="floatingInput">Nom de région</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Population">
+                            <label for="floatingInput">Population</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Langue parlée">
+                            <label for="floatingInput">Langue parlée</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Domaine d'activité">
+                            <label for="floatingInput">Domaine d'activité</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected></option>
+                              <option value="1">Mali</option>
+                              <option value="2">Sénégal</option>
+                              <option value="3">France</option>
+                            </select>
+                            <label for="floatingInput">Choisir le pays</label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                          rows="2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Présentation de la région</label>
+                      </div>
+                      <br>
+                      <div class="row bA">
+                        <button mat-button class="btnAj"
+                          style="background-color: #3BC3FF; text-align: center;border-radius: 12px;"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <span>Ajouter</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
