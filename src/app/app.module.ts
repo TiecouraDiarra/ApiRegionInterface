@@ -20,6 +20,9 @@ import { DetailregionComponent } from './detailregion/detailregion.component';
 import { DetailpaysregionComponent } from './detailpaysregion/detailpaysregion.component';
 import { LoginComponent } from './login/login.component';
 import { CreercompteComponent } from './creercompte/creercompte.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent, BoardComponent, AccueilComponent, RegionsComponent, UtilisateurComponent, DetailpaysComponent, DetailregionComponent, DetailpaysregionComponent, LoginComponent, CreercompteComponent],
   imports: [
@@ -33,6 +36,9 @@ import { CreercompteComponent } from './creercompte/creercompte.component';
     MatDividerModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

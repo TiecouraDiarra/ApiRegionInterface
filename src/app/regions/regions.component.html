@@ -8,7 +8,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Nombre de pays</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalpays}}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -24,7 +24,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Nombre de régions</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">21</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{totaleregion}}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -40,7 +40,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Population mondiale</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">21 000 000 hbts</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalepopulationmondiale}} habitants</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -62,20 +62,32 @@
         </div>
         <div class="container regionrow">
             <div class="row">
-                <div class="col">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-md-5">
+                      <div class="input-group input-group-lg" style="margin-top: 20px;">
+                        <input type="text" class="form-control" placeholder="Rechercher" [(ngModel)]="searchText"  />
+                        <span class="input-group-text border-0" >
+                          <mat-icon>search</mat-icon></span>
+                      </div>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                <div class="col" *ngFor="let Region of region | filter:searchText | paginate:{itemsPerPage :10, currentPage:p}; let id = index">
 
                     <div class="card cardi" style="width: 10rem;">
-                        <a routerLink="/detailregion">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/H%C3%B4tel_de_Ville_de_Kayes.jpg/280px-H%C3%B4tel_de_Ville_de_Kayes.jpg"
+                        <a (click)="goToDettailRegion(Region.idRegion)">
+                            <img src="../../assets/images/regions/{{Region.photoregion}}"
                                 class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">KAYES</h5>
-                                <h5 class="card-text"><strong>Pays :</strong> MALI </h5>
+                                <h5 class="card-title">{{Region.nom}}</h5>
+                                <h5 class="card-text"><strong>Pays :</strong> {{Region.pays.nomPays}} </h5>
                             </div>
                         </a>
                     </div>
 
                 </div>
+                <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
 
             </div>
 
@@ -182,15 +194,15 @@
                                                 <div class="col">
                                                     <div class="form-floating mb-3">
                                                         <input type="text" class="form-control" id="floatingInput"
-                                                            placeholder="Nom de région">
+                                                            placeholder="Nom de région" [(ngModel)]="nom">
                                                         <label for="floatingInput">Nom de région</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-floating mb-3">
                                                         <input type="text" class="form-control" id="floatingInput"
-                                                            placeholder="Population">
-                                                        <label for="floatingInput">Population</label>
+                                                            placeholder="Code de la région" [(ngModel)]="code_region">
+                                                        <label for="floatingInput">Code de la région</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -198,47 +210,53 @@
                                                 <div class="col">
                                                     <div class="form-floating mb-3">
                                                         <input type="text" class="form-control" id="floatingInput"
-                                                            placeholder="Langue parlée">
+                                                            placeholder="Domaine d'activité" [(ngModel)]="domaineAct">
+                                                        <label for="floatingInput">Domaine d'activité</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            placeholder="Nombre de la population" [(ngModel)]="nb_population">
+                                                        <label for="floatingInput">Nombre de la population</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            placeholder="Langue parlée" [(ngModel)]="langue">
                                                         <label for="floatingInput">Langue parlée</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" class="form-control" id="floatingInput"
-                                                            placeholder="Domaine d'activité">
-                                                        <label for="floatingInput">Domaine d'activité</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="input-group mb-3">
-                                                        <input type="file" class="form-control" id="inputGroupFile02">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-floating mb-3">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected></option>
-                                                            <option value="1">Mali</option>
-                                                            <option value="2">Sénégal</option>
-                                                            <option value="3">France</option>
+                                                        <select [(ngModel)]="pays" class="form-select" aria-label="Default select example">
+                                                            <option selected>----Pays----</option>
+                                                            <option value="{{Pays.nomPays}}" *ngFor="let Pays of npays">{{Pays.nomPays}}</option>
+                                                            
                                                         </select>
                                                         <label for="floatingInput">Choisir le pays</label>
 
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row">   
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" class="form-control" id="inputGroupFile02" (change)="fileChang($event)">
+                                                    </div>
+                                            </div>
                                             <div class="form-floating">
                                                 <textarea class="form-control" placeholder="Leave a comment here"
-                                                    id="floatingTextarea2" rows="2" style="height: 100px"></textarea>
+                                                    id="floatingTextarea2" rows="2" style="height: 100px" [(ngModel)]="presentationRegion"></textarea>
                                                 <label for="floatingTextarea2">Présentation de la région</label>
                                             </div>
                                             <br>
                                             <div class="row bA">
                                                 <button mat-button class="btnAj"
                                                     style="background-color: #3BC3FF; text-align: center;border-radius: 12px;"
-                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                     (click)="AjouterRegion()">
                                                     <span>Ajouter</span>
                                                 </button>
                                             </div>

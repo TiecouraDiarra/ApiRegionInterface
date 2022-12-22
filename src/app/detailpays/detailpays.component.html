@@ -7,11 +7,11 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    MALI</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">Bamako</div>
+                                    {{pays.nomPays}}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{pays.capitale}}</div>
                             </div>
                             <div class="col-auto">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAG1BMVEUUtTrOESb80RYAtDt3vTL/0xH/2xTcYyLMACZ4nGq/AAAAeklEQVR4nO3OSQEAIAwAoHnO/ontMJ9CAiLqxly9bOdpdQ9rbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW3tL9oX62diUWhCyzAAAAAASUVORK5CYII="
+                                <img src="../../assets/images/pays/{{pays.drapeuaimage}}"
                                     class="drapeau" alt="">
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Nombre de régions</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">21</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{nbregion}}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -41,7 +41,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Nombre de la population</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">21 000 000 hbts</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{pays.nbpopulationpays}} habitants</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -61,21 +61,17 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-uppercase mb-1" style="text-align: center;">
-                                    Présentation : MALI</div>
+                                    Présentation : {{pays.nomPays}}</div>
                                 <div style="text-align: justify;">
-                                    <h3>Le Mali, en forme longue
-                                        la république du Mali, est un État d'Afrique de l'Ouest, frontalier
-                                        de la Mauritanie à l'ouest, de l'Algérie au nord-nord-est, du Niger à l'est,
-                                        du Burkina Faso et de la Côte d'Ivoire au sud-sud-ouest,
-                                        de la Guinée au sud-ouest et du Sénégal à l'ouest-sud-ouest.</h3>
-                                    <div class="row" style="margin-left: 20%;">
+                                    <h3>{{pays.presentation}}</h3>
+                                    <div class="row" style="margin-left: 15%;">
                                         <div class="col-auto">
-                                            <!-- <h3><strong>Capitale :</strong> 120 000 hbts </h3> -->
-                                            <h3><strong>Superficie :</strong> 1,24 million km² </h3>
+                                            <h3><strong>Capitale :</strong> {{pays.capitale}} </h3>
+                                            <h3><strong>Superficie :</strong> {{pays.superficie}} km² </h3>
                                         </div>
                                         <div class="col-auto">
-                                            <!-- <h3><strong>Devise :</strong> Franc CFA </h3> -->
-                                            <h3><strong>Langue officielle :</strong> Français </h3>
+                                            <h3><strong>Devise :</strong> {{pays.devise}} </h3>
+                                            <h3><strong>Langue officielle :</strong> {{pays.langueoficielle}} </h3>
                                         </div>
                                     </div>
                                     <!-- <a href="#" class="btn-region">Découvrir les régions</a> -->
@@ -107,9 +103,9 @@
                                 <div class="text-xs font-weight-bold text-uppercase mb-1 py-2"
                                     style="text-align: center;">
                                     Sa carte</div>
-                                <img src="https://mali-bamako.fr/wp-content/uploads/2020/06/unnamed.jpg"
+                                <img src="../../assets/images/pays/{{pays.carteimage}}"
                                     class="carte py-3" alt="">
-                                    <button mat-button class="btn-regions" routerLink="/detailpaysregion" style="margin-left: 20%;">
+                                    <button mat-button class="btn-regions" style="margin-left: 20%;" (click)="goToDettailPaysRegion(pays.idPays)">
                                         <span>Découvrir les régions</span>
                                     </button>
                             </div>

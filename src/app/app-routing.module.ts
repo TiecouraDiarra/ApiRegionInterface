@@ -33,15 +33,15 @@ const routes: Routes = [
     component:UtilisateurComponent
   },
   {
-    path:"detailspays",
+    path:"detailspays/:id",
     component:DetailpaysComponent
   },
   {
-    path:"detailregion",
+    path:"detailregion/:id",
     component:DetailregionComponent
   },
   {
-    path:"detailpaysregion",
+    path:"detailpaysregion/:id",
     component:DetailpaysregionComponent
   },
   {

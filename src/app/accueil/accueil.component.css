@@ -1,69 +1,76 @@
 p {
-    font-weight: 200;
-    font-size: 20px;
-  }
-  
-  .py-1 {
-    border-radius: 12px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  mat-divider {
-    /* margin-top: 16px;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.py-1 {
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+mat-divider {
+  /* margin-top: 16px;
       margin-bottom: 16px; */
-    height: 4px;
-    background-color: black;
-  }
-  
-  /* AFFICHAGE DES PAYS*/
-  
-  .cardi {
-    margin-top: 1em;
-    padding: 1.5em 0.5em 0.5em;
-    border-radius: 2em;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  .col a{
-    text-decoration: none;
-  }
-  
-  .card img {
-    width: 45%;
-    /* border-radius: 50%; */
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card .card-title {
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-  
-  .btnAj {
-    border-radius: 2em;
-    background-color: teal;
-    color: #ffffff;
-    width: 150px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 35px;
-    margin-bottom: 2vh;
-    /* padding: 0.5em 1.5em; */
-  }
-  
-  .card .btnAj:hover {
-    background-color: rgba(0, 128, 128, 0.7);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .regionrow {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 15px;
-    height: 39vh !important;
-  }
+  height: 4px;
+  background-color: black;
+}
+
+/* AFFICHAGE DES PAYS*/
+
+.cardi {
+  margin-top: 1em;
+  padding: 1.5em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.col a {
+  text-decoration: none;
+}
+
+.card img {
+  width: 45%;
+  /* border-radius: 50%; */
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-title {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.btnAj {
+  border-radius: 2em;
+  background-color: teal;
+  color: #ffffff;
+  width: 150px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35px;
+  margin-bottom: 2vh;
+  /* padding: 0.5em 1.5em; */
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card .btnAj:hover {
+  background-color: rgba(0, 128, 128, 0.7);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.regionrow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  /* height: 39vh !important; */
+}
 
 /* POPUP */
 .register-left {
@@ -101,21 +108,21 @@ p {
 
 @-webkit-keyframes mover {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 
   100% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
 @keyframes mover {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 
   100% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
@@ -183,6 +190,6 @@ p {
   font-size: 20px;
 }
 
-.bA{
-margin-top: 1%;
+.bA {
+  margin-top: 1%;
 }

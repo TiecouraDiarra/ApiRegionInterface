@@ -1,52 +1,63 @@
 /* CAROUSEL POUR AFFICHER LES REGIONS*/
-.carousel-item{
-    height: 10%;
-  }
-  .img{
-    height: 50vh !important;
-  }
-  
-  /* CARD POUR AFFICHER LES REGIONS*/
-  .card {
-      margin-top: 2em;
-      padding: 1.5em 0.5em 0.5em;
-      border-radius: 2em;
-      text-align: center;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-    .card img {
-      width: 45%;
-      /* border-radius: 50%; */
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    .card .card-title {
-      font-weight: 700;
-      font-size: 1.5em;
-    }
-    .card .btn {
-      border-radius: 2em;
-      background-color: #3BC3FF;
-      color: #ffffff;
-      padding: 0.5em 1.5em;
-    }
-    .card .btn:hover {
-      background-color: #3BC3FF;
-      color: #ffffff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-  
-    /*PAGINATION*/
-    .pagination{
-      justify-content: center;
-      margin-top: 10px;
-  }
-  
-  ;.pagination .current {
-      padding: .1875rem .625rem;
-      background: #004466;
-      color: #fefefe;
-      cursor: default;
-  }
-  
-    
+.carousel-item {
+  height: 10%;
+}
+
+.img {
+  height: 50vh !important;
+}
+
+/* CARD POUR AFFICHER LES REGIONS*/
+.card {
+  margin-top: 2em;
+  padding: 1.5em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 45%;
+  /* border-radius: 50%; */
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-title {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.card .btn {
+  border-radius: 2em;
+  background-color: #3BC3FF;
+  color: #ffffff;
+  padding: 0.5em 1.5em;
+}
+
+.card .btn:hover {
+  background-color: #3BC3FF;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.test {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/*PAGINATION*/
+.pagination {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+;
+
+.pagination .current {
+  padding: .1875rem .625rem;
+  background: #004466;
+  color: #fefefe;
+  cursor: default;
+}

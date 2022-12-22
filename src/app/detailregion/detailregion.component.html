@@ -1,7 +1,7 @@
 <body>
     <div class="container" style="width: 95%; margin-left: auto; margin-right: auto;">
         <div class="row mb-3 st">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/61/73/a7/vue-de-l-ancienne-gare.jpg?w=500&h=300&s=1"
+            <img src="../../assets/images/regions/{{region.photoregion}}"
                 class="imageR" class="" alt="" style="height:450px;">
         </div>
         <div class="row py-2">
@@ -14,22 +14,17 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-uppercase mb-1" style="text-align: center;">
-                                    Région : Kayes</div>
+                                    Région : {{region.nom}}</div>
                                 <div style="text-align: justify;">
-                                    <h3>Kayes est une grande ville et une commune de l’ouest du Mali
-                                        à 495 km au nord-ouest de Bamako, sur les rives du fleuve Sénégal.
-                                        Elle est la capitale de la première région administrative et
-                                        le chef-lieu du cercle qui porte son nom. La ville connaît un
-                                        fort accroissement démographique puisqu'elle passe de 80 146 habitants
-                                        en 20051 à 127 36 habitants en 2009.</h3>
+                                    <h3>{{region.presentationRegion}}</h3>
                                     <div class="row">
                                         <div class="col-auto">
-                                            <h3><strong>Population :</strong> 20 000 hbts </h3>
-                                            <h3><strong>Langue parlée :</strong> Sarakolé </h3>
+                                            <h3><strong>Population :</strong> {{region.nb_population}} habitants </h3>
+                                            <h3><strong>Langue parlée :</strong> {{region.langue}} </h3>
                                         </div>
                                         <div class="col-auto">
-                                            <h3><strong>Domaine d'activité :</strong> Commerce </h3>
-                                            <h3><strong>Superficie :</strong> 22 192 km2 </h3>
+                                            <h3><strong>Domaine d'activité :</strong> {{region.domaineAct}} </h3>
+                                            <h3><strong>Code de la region :</strong> {{region.code_region}} </h3>
                                         </div>
                                     </div>
 

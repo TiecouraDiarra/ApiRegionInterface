@@ -58,11 +58,17 @@ p {
     color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+
+  .pagination {
+    justify-content: center;
+    margin-top: 20px;
+  }
   
   .regionrow {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 15px;
-    height: 39vh !important;
+    /* height: 39vh !important; */
+    padding-bottom: 15px;
   }
 
 
